@@ -2,6 +2,7 @@
 //= require jquery_ujs
 //= require angular
 //= require js-data
+//= require js-data-http
 //= require js-data-angular
 //= require angular-rails-templates
 //= require_tree ../templates/

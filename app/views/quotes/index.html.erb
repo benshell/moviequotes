@@ -15,7 +15,7 @@
     <% @quotes.each do |quote| %>
       <tr>
         <td><%= quote.quote %></td>
-        <td><%= quote.movie %></td>
+        <td><%= quote.movie.name %></td>
         <td><%= link_to 'Show', quote %></td>
         <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
         <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>

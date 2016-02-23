@@ -1,3 +1,27 @@
 <div ng-controller="QuotesController">
+  <div class="quote" ng-repeat="quote in quotes">
+    <blockquote>
+      "{{quote.quote}}" &mdash;{{quote.movie.name}}
+      <button class="btn btn-default" ng-click="editQuote(quote)"><span class="glyphicon glyphicon-pencil"></span></button>
+      <button class="btn btn-default" ng-click="removeQuote(quote)"><span class="glyphicon glyphicon-trash"></span></button>
+    </blockquote>
+  </div>
 
+  <form>
+    <h3>{{action}} a quote</h3>
+    <div class="form-group">
+      <label for="movie">Select a movie</label>
+      <select id="movie" class="form-control" ng-model="quote.movie" ng-options="movie as movie.name for movie in movies">
+        <option value=""></option>
+      </select>
+      <input ng-if="!quote.movie" type="text" class="form-control" placeholder="Or enter a movie name" ng-model="quote.newMovie">
+      {{movie.name}}
+    </div>
+    <div class="form-group">
+      <label for="quote">Quote</label>
+      <input type="text" class="form-control" id="quote" placeholder="Enter a quote" ng-model="quote.quote">
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="save()">Save</button>
+    <button class="btn btn-default" ng-click="reset()">Cancel</button>
+  </form>
 </div>

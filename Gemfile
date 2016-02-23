@@ -45,3 +45,4 @@ end
 
 gem 'bootstrap-sass'
 gem 'angular-rails-templates', '~> 1.0'
+gem 'angular_rails_csrf'
