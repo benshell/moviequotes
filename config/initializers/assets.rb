@@ -11,7 +11,8 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 ASSETS_PATHS = [
-    %w(vendor assets bower_components)
+  %w(app assets templates),
+  %w(vendor assets bower_components)
 ]
 
 Rails.application.config.assets.paths += ASSETS_PATHS.map do |path|
